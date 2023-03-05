@@ -43,7 +43,7 @@ def main():
         with open("test/"+test_file, 'r') as f:
             n=int(f.readline())
             parents=list(map(int,f.readline().split()))
-    else:
+    elif mode == 'I':
         n=int(input())
         parents=list(map(int,input().split()))
 
