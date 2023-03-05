@@ -43,16 +43,17 @@ def main():
         with open("test/"+test_file, 'r') as f:
             n=int(f.readline())
             parents=list(map(int,f.readline().split()))
+            print(compute_height(n,parents))
     elif mode == 'I':
         n=int(input())
         parents=list(map(int,input().split()))
+        print(compute_height(n,parents))
 
 
     # input number of elements
     # input values in one variable, separate with space, split these values in an array
     
     # call the function and output it's result
-    print(compute_height(n,parents))
 
 
 # In Python, the default limit on recursion depth is rather low,
