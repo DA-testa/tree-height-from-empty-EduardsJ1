@@ -42,9 +42,7 @@ def main():
         test_file = input()
         with open(f"/workspaces/tree-height-from-empty-EduardsJ1/test/{test_file}", encoding='utf-8') as f:
             n = int(f.readline().strip())
-            
-            parents = list(map(int, f.readline().strip().split()))
-            
+            parents = list(map(int, f.readline().strip().split()))  
     else:
         n=int(input())
         parents=list(map(int,input().split()))
