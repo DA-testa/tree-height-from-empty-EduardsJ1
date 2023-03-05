@@ -37,11 +37,22 @@ def main():
     # implement input form keyboard and from files
     # let user input file name to use, don't allow file names with letter a
     # account for github input inprecision
-    
+    mode = input()
+    if mode == 'F':
+        test_file = input()
+        with open(f"/workspaces/tree-height-from-empty-EduardsJ1/test/{test_file}") as f:
+            n = int(f.readline().strip())
+            
+            parents = list(map(int, f.readline().strip().split()))
+            
+    else:
+        n=int(input())
+        parents=list(map(int,input().split()))
+
+
     # input number of elements
     # input values in one variable, separate with space, split these values in an array
-    n=int(input())
-    parents=list(map(int,input().split()))
+    
     # call the function and output it's result
     print(compute_height(n,parents))
 
