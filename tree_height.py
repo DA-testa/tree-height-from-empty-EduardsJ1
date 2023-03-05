@@ -38,16 +38,18 @@ def main():
     # let user input file name to use, don't allow file names with letter a
     # account for github input inprecision
     mode = input()
-    if mode == 'F':
+    if 'F' in mode:
         test_file = input()
         with open("test/"+test_file, 'r') as f:
             n=int(f.readline())
             parents=list(map(int,f.readline().split()))
             print(compute_height(n,parents))
-    elif mode == 'I':
+    elif 'I' in mode:
         n=int(input())
         parents=list(map(int,input().split()))
         print(compute_height(n,parents))
+    else:
+        print("nepareizi")
 
 
     # input number of elements
