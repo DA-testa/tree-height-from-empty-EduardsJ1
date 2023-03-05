@@ -40,7 +40,7 @@ def main():
     mode = input()
     if mode == 'F':
         test_file = input()
-        with open(f"/workspaces/tree-height-from-empty-EduardsJ1/test/{test_file}") as f:
+        with open(f"/workspaces/tree-height-from-empty-EduardsJ1/test/{test_file}", encoding='utf-8') as f:
             n = int(f.readline().strip())
             
             parents = list(map(int, f.readline().strip().split()))
