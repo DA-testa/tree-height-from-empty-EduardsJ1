@@ -37,15 +37,15 @@ def main():
     # implement input form keyboard and from files
     # let user input file name to use, don't allow file names with letter a
     # account for github input inprecision
-    mode = input().rstrip()
+    mode = input()
     if mode == 'F':
-        test_file = input().rstrip()
-        with open(f"/workspaces/tree-height-from-empty-EduardsJ1/test/{test_file}", encoding='utf-8') as f:
-            n = int(f.readline().strip())
-            parents = list(map(int, f.readline().strip().split()))  
+        test_file = input()
+        with open("test/"+test_file, 'r') as f:
+            n=int(f.readline())
+            parents=list(map(int,f.readline().split()))
     else:
         n=int(input())
-        parents=list(map(int,input().rstrip().split()))
+        parents=list(map(int,input().split()))
 
 
     # input number of elements
